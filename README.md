@@ -1,7 +1,13 @@
 # ThreeJS Playground
 
-Examples with three js
+[![Netlify Status](https://api.netlify.com/api/v1/badges/97a3cbf5-fbe6-4273-8316-fa92a6c000fa/deploy-status)](https://app.netlify.com/sites/semcelik-webgl/deploys)
 
+This project contains examples about WebGL and ThreeJS
+
+## Demo
+You can check it in
+
+https://semcelik-webgl.netlify.com/
 
 ## Pig Tracker
 
