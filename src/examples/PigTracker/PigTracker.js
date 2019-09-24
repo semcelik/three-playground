@@ -35,6 +35,7 @@ function PigTracker() {
       new SphereGeometry(10, 10, 10),
       new MeshNormalMaterial()
     );
+    cursor.current.position.copy(mousePosition.current);
     scene.current.add(cursor.current);
     animate();
     // eslint-disable-next-line react-hooks/exhaustive-deps
