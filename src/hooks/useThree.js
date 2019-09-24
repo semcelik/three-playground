@@ -33,7 +33,19 @@ function useThree() {
     controls.dampingFactor = 0.25;
     controls.enableZoom = false;
     controls.target = new Vector3(0, 0, 0);
+
+    window.addEventListener("resize", onWindowResize, false);
+    return () => {
+      window.removeEventListener("resize", onWindowResize);
+    };
   }, []);
+
+  function onWindowResize() {
+    camera.current.aspect = window.innerWidth / window.innerHeight;
+    camera.current.updateProjectionMatrix();
+
+    renderer.current.setSize(window.innerWidth, window.innerHeight);
+  }
 
   return {
     domRef,

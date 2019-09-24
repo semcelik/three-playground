@@ -37,7 +37,6 @@ function PigTracker() {
     );
     scene.current.add(cursor.current);
     animate();
-    window.addEventListener("mousemove", handleMouseMove);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -54,6 +53,7 @@ function PigTracker() {
       cursor.current.position.copy(mousePosition.current);
     }
     movePigs();
+    lookAll();
     renderer.current.render(scene.current, camera.current);
   }
 
@@ -74,7 +74,7 @@ function PigTracker() {
     });
   }
 
-  function handleMouseMove() {
+  function lookAll() {
     if (pigs.current) {
       pigs.current.forEach(pig => {
         const { x, y, z } = cursor.current.position;
@@ -93,7 +93,7 @@ function PigTracker() {
           <DefaultInputRange value={yVolume} onChange={setYVolume} />
         </CustomControlPanel.Row>
       </CustomControlPanel>
-      <div ref={domRef} />
+      <div className="pig-canvas-wrapper" ref={domRef} />
     </>
   );
 }
