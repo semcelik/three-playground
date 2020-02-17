@@ -3,13 +3,13 @@ import {
   MeshNormalMaterial,
   Mesh,
   MeshBasicMaterial,
-  Group
-} from "three";
+  Group,
+} from 'three';
 
 const PIG_SIZE = {
-  SMALL: "s",
-  MEDIUM: "m",
-  LARGE: "l"
+  SMALL: 's',
+  MEDIUM: 'm',
+  LARGE: 'l',
 };
 
 function createPig(size = PIG_SIZE.MEDIUM) {
@@ -28,16 +28,16 @@ function createPig(size = PIG_SIZE.MEDIUM) {
   const noseSize = 1 * multiplier;
   const eyeSize = {
     width: (2 / 3) * multiplier,
-    depth: (1 / 3) * multiplier
+    depth: (1 / 3) * multiplier,
   };
   const eyePosition = {
     x: -1 * multiplier,
     y: (5 / 3) * multiplier,
-    z: (8 / 3) * multiplier
+    z: (8 / 3) * multiplier,
   };
   const nosePosition = {
     y: (-2 / 3) * multiplier,
-    z: 3 * multiplier
+    z: 3 * multiplier,
   };
 
   const geometry = new BoxGeometry(faceSize, faceSize, faceSize);
@@ -55,7 +55,7 @@ function createPig(size = PIG_SIZE.MEDIUM) {
     eyeSize.width,
     eyeSize.width
   );
-  const leftEyeMaterial = new MeshBasicMaterial({ color: "#fff" });
+  const leftEyeMaterial = new MeshBasicMaterial({ color: '#fff' });
   const leftEye = new Mesh(leftEyeGeometry, leftEyeMaterial);
   leftEye.position.x = eyePosition.x;
   leftEye.position.y = eyePosition.y;
