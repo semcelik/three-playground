@@ -33,7 +33,6 @@ function SolarSystem() {
 
     scene.current.add(new GridHelper(40, 40));
     animate();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function animate() {

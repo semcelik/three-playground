@@ -1,15 +1,14 @@
-import { useRef, useEffect } from "react";
-import { Vector3 } from "three";
+import { useRef, useEffect } from 'react';
+import { Vector3 } from 'three';
 
 function useMouseVector(camera) {
   const positionVector = useRef(new Vector3(0, 0, 0));
 
   useEffect(() => {
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove);
     return () => {
-      window.removeEventListener("mousemove");
+      window.removeEventListener('mousemove');
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function handleMouseMove({ clientX, clientY }) {
