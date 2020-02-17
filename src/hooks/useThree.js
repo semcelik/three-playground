@@ -1,6 +1,6 @@
-import { useRef, useEffect } from "react";
-import { Scene, PerspectiveCamera, WebGLRenderer, Vector3 } from "three";
-import OrbitControls from "three-orbitcontrols";
+import { useRef, useEffect } from 'react';
+import { Scene, PerspectiveCamera, WebGLRenderer, Vector3 } from 'three';
+import OrbitControls from 'three-orbitcontrols';
 
 function useThree() {
   const domRef = useRef();
@@ -34,9 +34,9 @@ function useThree() {
     controls.enableZoom = false;
     controls.target = new Vector3(0, 0, 0);
 
-    window.addEventListener("resize", onWindowResize, false);
+    window.addEventListener('resize', onWindowResize, false);
     return () => {
-      window.removeEventListener("resize", onWindowResize);
+      window.removeEventListener('resize', onWindowResize);
     };
   }, []);
 
@@ -51,7 +51,7 @@ function useThree() {
     domRef,
     scene,
     camera,
-    renderer
+    renderer,
   };
 }
 

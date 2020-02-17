@@ -4,7 +4,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { Mesh, SphereGeometry, MeshNormalMaterial, Vector3 } from "three";
 import useThree from "../../hooks/useThree";
 import useMouseVector from "../../hooks/useMouseVector";
-import { createPig, PIG_SIZE, getRandomPosition } from "../../helper";
+import { createPig, PIG_SIZE, getRandomPosition } from "./PigTracker.helper";
 import CustomControlPanel from "../../components/CustomControlPanel";
 import { Math as ThreeMath } from "three";
 import DefaultInputRange from "../../components/DefaultInputRange";

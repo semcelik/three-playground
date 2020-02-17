@@ -1,13 +1,13 @@
-import "./App.css";
-import "react-input-range/lib/css/index.css";
+import './App.scss';
+import 'react-input-range/lib/css/index.css';
 
-import React from "react";
-import PigTracker from "./examples/PigTracker";
+import React from 'react';
+import SolarSystem from './examples/SolarSystem/SolarSystem';
 
 function App() {
   return (
-    <div className="App">
-      <PigTracker />
+    <div className="app">
+      <SolarSystem />
     </div>
   );
 }
