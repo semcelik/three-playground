@@ -7,7 +7,7 @@ function useMouseVector(camera) {
   useEffect(() => {
     window.addEventListener('mousemove', handleMouseMove);
     return () => {
-      window.removeEventListener('mousemove');
+      window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
