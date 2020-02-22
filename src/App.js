@@ -2,13 +2,24 @@ import './App.scss';
 import 'react-input-range/lib/css/index.css';
 
 import React from 'react';
-import SolarSystem from './examples/SolarSystem/SolarSystem';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import ROUTES from './routes';
+import AppNavigator from './components/AppNavigator';
 
 function App() {
   return (
-    <div className="app">
-      <SolarSystem />
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <AppNavigator />
+        <Switch>
+          {ROUTES.map(({ key, path, component: Component }) => (
+            <Route exact key={key} path={path}>
+              <Component />
+            </Route>
+          ))}
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 
