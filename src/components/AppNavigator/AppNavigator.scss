@@ -1,3 +1,17 @@
+.menu-icon-button {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  outline: none;
+  cursor: pointer;
+}
+
 .app-navigator {
   position: absolute;
   top: 20px;
@@ -36,6 +50,7 @@
       }
     }
   }
+
   .menu-content {
     padding: 10px;
     .menu-list {
