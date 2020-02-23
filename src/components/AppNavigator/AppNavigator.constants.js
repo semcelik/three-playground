@@ -1,13 +1,9 @@
 export const CLOSED = {
-  width: 20,
-  height: 20,
-  top: 3,
-  left: 3,
+  WIDTH: 40,
+  POSITION_PERCENTAGE: 3,
 };
 
 export const OPEN = {
-  width: 300,
-  height: 300,
-  top: 50,
-  left: 50,
+  WIDTH: 300,
+  POSITION_PERCENTAGE: 50,
 };

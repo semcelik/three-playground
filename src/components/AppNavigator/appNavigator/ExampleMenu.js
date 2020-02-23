@@ -1,6 +1,6 @@
 import React from 'react';
-import ROUTES from '../../../routes';
 import { Link } from 'react-router-dom';
+import ROUTES from '../../../routes';
 
 function ExampleMenu({ onClose, closeAfterSelect }) {
   return (
@@ -13,8 +13,12 @@ function ExampleMenu({ onClose, closeAfterSelect }) {
       <div className="menu-content">
         <ul className="list menu-list">
           {ROUTES.map(({ key, name, path }) => (
-            <Link to={path} {...(closeAfterSelect && { onClick: onClose })}>
-              <li key={key}>{name}</li>
+            <Link
+              key={key}
+              to={path}
+              {...(closeAfterSelect && { onClick: onClose })}
+            >
+              <li>{name}</li>
             </Link>
           ))}
         </ul>
