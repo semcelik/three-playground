@@ -1,8 +1,9 @@
+import './AnimatedButton.scss';
+
 import React from 'react';
 import { animated, useSpring } from 'react-spring';
-import { HamburgerMenuIcon } from '../../Icons';
 
-function MenuButton({ onClick }) {
+function AnimatedButton({ className, children, onClick }) {
   const [{ transformSR }, set] = useSpring(() => ({
     transformSR: [1, 0],
     config: { tension: 180, friction: 20 },
@@ -22,7 +23,7 @@ function MenuButton({ onClick }) {
 
   return (
     <animated.button
-      className="menu-icon-button"
+      className={`animated-button ${className}`}
       onClick={onClick}
       onMouseOver={handleOnHover}
       onTouchStart={handleOnHover}
@@ -30,9 +31,9 @@ function MenuButton({ onClick }) {
       onTouchEnd={handleOnBlur}
       style={{ transform: interpolateTransform }}
     >
-      <HamburgerMenuIcon width={24} height={24} />
+      {children}
     </animated.button>
   );
 }
 
-export default MenuButton;
+export default AnimatedButton;

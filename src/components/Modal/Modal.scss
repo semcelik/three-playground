@@ -1,0 +1,36 @@
+.modal-mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: transparent;
+}
+
+.modal {
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  left: 40px;
+  background-color: white;
+
+  .header {
+    height: 40px;
+    .close-button {
+      float: right;
+      margin-right: 10px;
+      width: 40px;
+      cursor: pointer;
+      text-align: center;
+      justify-content: center;
+      font-size: 1.5em;
+      border: none;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .menu-content {
+    padding: 10px;
+  }
+}
