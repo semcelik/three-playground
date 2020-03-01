@@ -12,8 +12,8 @@ function App() {
       <div className="app">
         <AppNavigator />
         <Switch>
-          {ROUTES.map(({ key, path, component: Component }) => (
-            <Route exact key={key} path={path}>
+          {ROUTES.map(({ key, path, component: Component, exact = true }) => (
+            <Route exact={exact} key={key} path={path}>
               <Component />
             </Route>
           ))}

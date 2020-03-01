@@ -12,6 +12,7 @@ const ROUTES = [
     key: 'solarSystem',
     path: '/solar-system',
     name: 'Solar System',
+    exact: false,
     component: SolarSystem,
   },
 ];
